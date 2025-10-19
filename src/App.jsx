@@ -1,6 +1,9 @@
+// andryrabanales/commerces/Commerces-29543afc4541042fd2440339e053fff8867a926a/src/App.jsx
+
 import { useEffect, useState } from 'react'
 import Header from "./components/Header.jsx";
 import ProductCard from './components/ProductCard'
+import VideoHero from './components/VideoHero.jsx'
 
 export default function App() {
   const [products, setProducts] = useState([])
@@ -11,7 +14,8 @@ export default function App() {
   return (
     <div className="space-y-6">
       <Header />
-      <section className="container text-center space-y-2">
+      <VideoHero /> {/* Componente de video insertado */}
+      <section className="container text-center space-y-2 pt-6">
         <h1 className="text-3xl font-bold">Productos seleccionados</h1>
         <p className="text-neutral-600">Calidad, envío directo del proveedor</p>
       </section>

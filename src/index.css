@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 /* No uses @tailwind base/components/utilities en v4 */
 
@@ -8,3 +9,20 @@ body { @apply text-neutral-900; }
 .btn { @apply inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-medium shadow transition active:scale-[.98]; }
 .btn-primary { @apply bg-black text-white hover:bg-neutral-800; }
 .card { @apply bg-white rounded-2xl shadow; }
+
+/* Estilos para el componente VideoHero (diseño para llenar el contenedor) */
+.video-hero {
+  @apply py-6; /* Espacio vertical */
+}
+
+.video-wrapper {
+  /* Define un contenedor que ocupa el 100% del ancho y es cuadrado (1:1) */
+  @apply relative w-full;
+  padding-top: 100%; /* Proporción 1:1 */
+  /* Eliminadas las propiedades de max-width y margin */
+}
+
+.video-wrapper video {
+  /* Asegura que el video se estire para cubrir completamente el contenedor */
+  @apply absolute top-0 left-0 w-full h-full object-cover;
+}

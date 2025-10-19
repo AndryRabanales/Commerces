@@ -1,24 +1,24 @@
+
 [
-    {
-      "id": "p-1001",
-      "title": "Mini licuadora portátil USB",
-      "description": "Batería recargable, 6 cuchillas, 400ml.",
-      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31b",
-      "price_cents": 34900
-    },
-    {
-      "id": "p-1002",
-      "title": "Audífonos Bluetooth con cancelación",
-      "description": "Hasta 30h de batería.",
-      "image": "https://images.unsplash.com/photo-1518443871451-8b6c3f3a3f58",
-      "price_cents": 59900
-    },
-    {
-      "id": "p-1003",
-      "title": "Lámpara LED de escritorio",
-      "description": "Brillo ajustable, brazo flexible.",
-      "image": "https://images.unsplash.com/photo-1455792244736-3ed96fcf4955",
-      "price_cents": 24900
-    }
-  ]
-  
+  {
+    "id": "p-1001",
+    "title": "Mistery Cap",
+    "description": "Gana una gorra Mistery",
+    "image": "/gorras.jpg",
+    "price_cents": 34900
+  },
+  {
+    "id": "p-1002",
+    "title": "Lentes Cristobal Luxury",
+    "description": "AGOTADO",
+    "image": "/Lentes.jpg",
+    "price_cents": 59900
+  },
+  {
+    "id": "p-1003",
+    "title": "Perfume Lumina",
+    "description": "AGOTADO",
+    "image": "/Perfume.jpg",
+    "price_cents": 24900
+  }
+]
