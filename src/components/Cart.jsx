@@ -22,13 +22,18 @@ export default function Cart() {
     <div>
       <button className="btn" onClick={() => setOpen(!open)}>🛒 Carrito ({items.reduce((a,i)=>a+i.qty,0)})</button>
       {open && (
-        <div className="fixed inset-0 bg-black/30 z-50" onClick={()=>setOpen(false)}>
-          <aside className="absolute right-0 top-0 h-full w-full max-w-md bg-white p-4 shadow-xl" onClick={e=>e.stopPropagation()}>
-            <div className="flex items-center justify-between mb-3">
+        <div className="fixed inset-0 bg-black/30 z-50" onClick={()=>setOpen(false)}> 
+          {/* Usamos flex flex-col y pt-4 pb-0 para controlar los bordes */}
+          <aside className="absolute right-0 top-0 h-full w-full max-w-md bg-white pt-4 pb-0 shadow-xl flex flex-col" onClick={e=>e.stopPropagation()}>
+            {/* Encabezado del carrito (padding lateral) */}
+            <div className="flex items-center justify-between mb-3 px-4">
               <h2 className="text-lg font-semibold">Tu carrito</h2>
               <button onClick={()=>setOpen(false)}>✕</button>
             </div>
-            <div className="space-y-3 max-h-[70vh] overflow-auto">
+            
+            {/* Contenido que scrollea (flex-grow para ocupar el espacio, padding solo lateral) */}
+            {/* CAMBIO: Eliminado 'pb-4' para evitar doble padding con el footer y asegurar que el área blanca llene hasta el borde del footer. */}
+            <div className="space-y-3 overflow-y-auto flex-grow px-4 bg-white"> 
               {items.length===0 && <p className="text-sm text-neutral-600">Vacío</p>}
               {items.map(i=> (
                 <div key={i.id} className="flex gap-3 items-center">
@@ -49,7 +54,10 @@ export default function Cart() {
                 </div>
               ))}
             </div>
-            <div className="border-t pt-3 mt-3 space-y-2">
+            
+            {/* Contenedor de Total y Botones (sticky bottom) */}
+            {/* CAMBIO CLAVE: Se eliminó 'mt-3' para cerrar el pequeño espacio transparente. */}
+            <div className="border-t pt-3 space-y-2 bg-white px-4 pb-4"> 
               <div className="flex items-center justify-between">
                 <span className="text-sm">Total</span>
                 <span className="text-base font-semibold">{formatMXN(total)}</span>
